@@ -175,18 +175,8 @@ export function JsCadView({
         const margin = 10
         const width = renderer.domElement.width
         const height = renderer.domElement.height
-        renderer.setViewport(
-          width - size - margin,
-          margin,
-          size,
-          size,
-        )
-        renderer.setScissor(
-          width - size - margin,
-          margin,
-          size,
-          size,
-        )
+        renderer.setViewport(width - size - margin, margin, size, size)
+        renderer.setScissor(width - size - margin, margin, size, size)
         renderer.setScissorTest(true)
         renderer.render(axisScene, axisCamera)
         renderer.setScissorTest(false)
